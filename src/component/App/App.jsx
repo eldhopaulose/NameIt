@@ -2,6 +2,9 @@ import React from 'react';
 import './App.scss';
 import Header from '../Header/Header';
 import SearchBox from '../SearchBox/searchBox';
+import ResulContainer from '../ResulContainer/ResulContainer';
+
+const name = require('@rstacruz/startup-name-generator');
 
 class App extends React.Component {
     constructor() {
@@ -10,10 +13,14 @@ class App extends React.Component {
         this.state = {
             HeaderTitle: 'Name It!',
             HeaderExtende: true,
+            SuggestNames: [],
         };
     }
     HandleInputChange = (InputText) => {
-        this.setState({ HeaderExtende: InputText.length > 0 ? false : true });
+        this.setState({
+            HeaderExtende: InputText.length > 0 ? false : true,
+            SuggestNames: name(InputText),
+        });
     };
 
     render() {
@@ -24,6 +31,7 @@ class App extends React.Component {
                     HeaderTitle={this.state.HeaderTitle}
                 />
                 <SearchBox onInputChange={this.HandleInputChange} />
+                <ResulContainer SuggestNames={this.state.SuggestNames} />
             </div>
         );
     }

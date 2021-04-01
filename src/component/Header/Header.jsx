@@ -11,7 +11,15 @@ const Header = ({ HeaderTitle, HeaderExtende }) => {
                     HeaderExtende ? 'head-img-expanded' : 'head-img-contracted'
                 }`}
             />
-            <h1 className="head-text">{HeaderTitle}</h1>
+            <h1
+                className={`head-text ${
+                    HeaderExtende
+                        ? 'head-text-expanded'
+                        : 'head-text-contracted'
+                }`}
+            >
+                {HeaderTitle}
+            </h1>
         </div>
     );
 };

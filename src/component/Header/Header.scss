@@ -6,6 +6,7 @@
     .head-text {
         font-family: 'Hachi Maru Pop', cursive;
         margin: 5px 0 15px 0;
+        transition: font-size 1s;
     }
     .head-img {
         width: auto;
@@ -19,4 +20,10 @@
         min-width: 100px;
         max-width: 120px;
     }
+}
+.head-text-expanded {
+    font-size: 36px;
+}
+.head-text-contracted {
+    font-size: 20px;
 }
