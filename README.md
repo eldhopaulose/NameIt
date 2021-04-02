@@ -2,4 +2,4 @@
 Run react app
 ### `npm start`
 
-Generate Car and Auto Business name ideas with our generator.
+Generate  Auto names ideas with our generator.
